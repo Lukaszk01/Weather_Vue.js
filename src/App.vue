@@ -1,6 +1,10 @@
 require('dotenv').config()
 <template>
   <div id="app" :class="typeof weather.main != 'undefined' && weather.main.temp > 16 ? 'warm' : ''">
+    <div class="header">
+      <h2>Type location(City, State, Country)</h2>
+    </div>
+
     <main>
       <div class="search-box">
         <input
@@ -32,7 +36,8 @@ export default {
   name: 'app',
   data () {
     return {
-      api_key: process.env.API_KEY,
+      // api_key: process.env.API_KEY,
+      api_key: '5b2c023d6408de90d3dd808282177742',
       url_base: 'https://api.openweathermap.org/data/2.5/',
       query: '',
       weather: {}
@@ -78,14 +83,14 @@ body {
 }
 
 #app {
-    background-image: url('./assets/SBS-L-SNOW-DAY-0206-13JM3.jpg');
+    background-image: url('./assets/uk-weather-cloudy.jpg');
     background-size: cover;
     background-position: bottom;
     transition: 0,4s;
 
   }
   #app.warm {
-    background-image: url('./assets/7OG4NT2UJNATJPI4KSCMQQFLC4.jpeg')
+    background-image: url('./assets/16423BF4-341D-4789-A8B2-AE987DF59144.jpg')
   }
 
 main {
@@ -166,5 +171,13 @@ main {
   font-weight: 700;
   font-style: italic;
   text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
+}
+.header {
+  text-align: center;
+  padding: 10px;
+  font-family: 'Red Rose', cursive;
+  color: #DAE0E6;
+  text-shadow: 0 0 3px black;
+
 }
 </style>
