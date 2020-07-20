@@ -1,3 +1,4 @@
+require('dotenv').config()
 <template>
   <div id="app" :class="typeof weather.main != 'undefined' && weather.main.temp > 16 ? 'warm' : ''">
     <main>
@@ -31,7 +32,7 @@ export default {
   name: 'app',
   data () {
     return {
-      api_key: '5b2c023d6408de90d3dd808282177742',
+      api_key: process.env.API_KEY,
       url_base: 'https://api.openweathermap.org/data/2.5/',
       query: '',
       weather: {}
