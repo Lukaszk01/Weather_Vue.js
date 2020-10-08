@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "node your-script.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
@@ -11,6 +12,8 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "dotenv": "^8.2.0",
+    "request": "^2.88.2",
+    "swagger-js-codegen": "^1.13.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
